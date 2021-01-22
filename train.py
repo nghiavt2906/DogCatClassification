@@ -56,8 +56,8 @@ def make_model(input_shape, num_classes, data_augmentation):
     return keras.Model(inputs, outputs)
 
 def save_model(model):
-    path = 'model/classifier.mdl'
-    joblib.dump(model, path)
+    path = 'model/classifier.h5'
+    model.save(path)
 
 def main():
     image_size = (180, 180)
